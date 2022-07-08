@@ -54,7 +54,9 @@ module.exports = {
   
       let number = []
       for (i = 0; i < 3; i++) { number[i] = Math.floor(Math.random() * slotItems.length); }
-  
+      for (i = 0; i < 3; i++) { number[i] = Math.floor(Math.random() * slotItems.length); }
+      for (i = 0; i < 3; i++) { number[i] = Math.floor(Math.random() * slotItems.length); }
+
       if (number[0] == number[1] && number[1] == number[2]) { 
           amount *= 9
           win = true;

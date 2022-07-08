@@ -7,6 +7,7 @@ var ee = require(`${process.cwd()}/botconfig/embed.json`);
 const emoji = require(`${process.cwd()}/botconfig/emojis.json`);
 const { duration, handlemsg } = require(`${process.cwd()}/handlers/functions`);
 const { connected } = require("process");
+
 module.exports = {
     name: "botinfo",
     aliases: ["info", "about", "stats"],
@@ -33,13 +34,15 @@ module.exports = {
         const totalMembers = client.users.cache.size;
         countertest = 0;
         const botinfo = new Discord.MessageEmbed()
-            .setAuthor(client.user.tag + " Information", es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL(), `https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`) 
+            .setAuthor({
+              name: client.user.tag + " Information",
+              iconURL: es.footericon
+            })
             .setDescription(eval(client.la[ls]["cmds"]["info"]["botinfo"]["variable1"]))
             .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
             .addField(client.la[ls].cmds.info.botinfo.field1.title, handlemsg(client.la[ls].cmds.info.botinfo.field1.value, {totalGuilds: totalGuilds, totalMembers: totalMembers, connections: connectedchannelsamount, connectedchannelsamount: connectedchannelsamount}), true)
-            .addField(client.la[ls].cmds.info.botinfo.field2.title, `\`\`\`yml\nNode.js: ${process.version}\nDiscord.js: v${Discord.version}\nEnmap: v5.8.4\`\`\``, true)
+            .addField(client.la[ls].cmds.info.botinfo.field2.title, `\`\`\`yml\nNode.js: ${process.version}\nDiscord.js: v${Discord.version}\nEnmap: v5.9.0\`\`\``, true)
             .addField(client.la[ls].cmds.info.botinfo.field3.title, handlemsg(client.la[ls].cmds.info.botinfo.field3.value, {cpu: percent.toFixed(2), ram: (process.memoryUsage().heapUsed/1024/1024).toFixed(2)}))
-            .addField(client.la[ls].cmds.info.botinfo.field4.title, `\`\`\`yml\nName: Easy Code\nWebSite: https://easy-code.ro\`\`\``, true)
             .setFooter(client.getFooter(es));
         tempmsg.edit({embeds: [botinfo]});
       });

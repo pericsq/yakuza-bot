@@ -20,7 +20,6 @@ module.exports =  async(client) => {
         console.log(`     ┃ `.bold.brightGreen + " ".repeat(-1 + stringlength - ` ┃ `.length) + "┃".bold.brightGreen)
         console.log(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`.bold.brightGreen)
     } catch { /* */ }
-
     console.table({
         'Bot User:': `${client.user.tag}`,
         'Guild(s):': `${client.guilds.cache.size} Servers`,

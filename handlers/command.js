@@ -1,16 +1,42 @@
-const {
-  readdirSync
-} = require("fs");
-const { MessageEmbed } = require("discord.js")
+const { readdirSync} = require("fs");
+const { MessageEmbed, WebhookClient } = require("discord.js");
 const Enmap = require("enmap");
 const serialize = require('serialize-javascript');
 const ee = require(`${process.cwd()}/botconfig/embed.json`);
-console.log(`\n\n${String("[READY]:: ".green)}Ready New `.brightGreen)
-console.log(`${String("[READY]:: ".green)}Coded by PericolRPG(Easy-Code) `.brightGreen)
-console.log(`${String("[READY]:: ".green)}Updated coding by PericolRPG(Discord Developers) `.brightGreen)
 
 
 module.exports = (client) => {
+  const stringlength = 69;
+
+  const d =  new Date();
+  const date = d.getHours() + ":" + d.getMinutes() + ", "+ d.toDateString();
+
+  console.log(`     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`.bold.brightGreen);
+  console.log(`     ┃ `.bold.brightGreen + `Discord Bot is online!`.bold.brightGreen + " ┃".bold.brightGreen);
+  console.log(`     ┃ `.bold.brightGreen + `Username: Yakuza | Date: ${date} ` + "┃".bold.brightGreen);
+  console.log(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`.bold.brightGreen);
+
+  const wrb = new WebhookClient({
+      id: "995016470788571167",
+      token: "w2w6ikpEVQ3RwvpHRpmHXA9Hkn7LlRYzre1jYhO__oQ2LncJcbp2jNlVC0asUEKJPQ5h"
+  });
+  const joinguild = new MessageEmbed()
+      .setTitle('READY')
+      .setDescription(`[READY]: Yakuza Bot | [TIME]: ${date}`)
+      .setColor('RANDOM')
+      .setTimestamp()
+      .setImage('https://media.discordapp.net/attachments/984111465936064522/984474226385911838/giphy_1.gif')
+      .setFooter({
+          text: `copyright by yakuza-bot`
+      })
+  wrb.send({ embeds: [joinguild] });
+
+
+  console.log(`\n\n${String("[READY]:: ".green)}Ready New `.brightGreen)
+  console.log(`${String("[READY]:: ".green)}Coded by PericolRPG(Easy-Code) `.brightGreen)
+  console.log(`${String("[READY]:: ".green)}Updated coding by PericolRPG(Discord Developers) `.brightGreen)
+
+
   let dateNow = Date.now();
   console.log(`${String("[x] :: ".magenta)}Now loading the Commands ...`.brightGreen)
   try {

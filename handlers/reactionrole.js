@@ -1,49 +1,4 @@
-/*
- **** EXAMPLE DB STRUCTURE:
-    //Create the database:
-    const Enmap = require("enmap");
-    // ... create the bot client
-    client.reactionrole = new Enmap({
-        name: "reactionrole-db",
-        dataDir: "./databases/reactionroleDB", // OPTIONAL, define where the db should be saved (create folders first)
-    })
 
-
-    const guildId = message.guild.id; // key in the database
-
-    //how to "ensure the db" for each guild
-    client.reactionrole.ensure(guildId, {
-        reactionroles: []
-    });
-
-
-    // Example data of a reactionrole
-    const ReactionRoleData = {
-        MESSAGE_ID: '871019011452850276',
-        remove_others: false, // if true, it means that only 1 reaction role can be used at once
-        Parameters: [ // Technically you could add infnite parameters (emojis), but discord just allows 20 at once on 1 message ...
-            { Emoji: '🛑', Emojimsg: '🛑', Role: '831972743280590848' }, // Unicode emoji
-            { Emoji: '866089513654419466', Emojimsg: '<a:Developer:905098544648699914>', Role: '845952370889981952' }, // Discord Custom Emoji
-            { Emoji: '🔥', Emojimsg: '🔥', Role: '844512850395398155' }, 
-        ]
-    }
-
-    // Add the data to the db
-    client.reactionrole.push(guildId, ReactionRoleData, "reactionrole");
-    // You do not need to remove the data from the db as it's only available as long as the message exists
-
-
-    //EDITING:  const messageId = "The ReactionRole Message to edit:"
-
-    const data = client.reactionrole.get(guildId, "reactionrole");
-    const index = data.findIndex(r => r.MESSAGE_ID == messageId);
-    if(index > -1) {
-        data[index] = newReactionRoleData;
-        client.reactionrole.set(guildId, data, "reactionrole")
-    } else {
-        console.log("No reactionrole found")
-    }
-*/
 
 module.exports = (client) => {
     //ADDING ROLES    
