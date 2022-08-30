@@ -1,7 +1,7 @@
 {
   "name": "yakuza-dashboard",
   "version": "1.0.0",
-  "description": "<a href=\"https://easy-code.ro\"><img src=\"https://discord.com/api/guilds/560214820494901250/widget.png?style=banner2\"></a>",
+  "description": "<a href=\"https://yakuza.white-zone.ro/\"><img src=\"https://discord.com/api/guilds/560214820494901250/widget.png?style=banner2\"></a>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,7 +26,7 @@
     "discord-backup": "^3.2.1",
     "discord-canvas": "^1.4.1",
     "discord-giveaways": "^5.2.1",
-    "discord.js": "^13.8.1",
+    "discord.js": "^13.10.3",
     "enmap": "^5.9.0",
     "erela.js": "^2.3.3",
     "erela.js-deezer": "^1.0.7",

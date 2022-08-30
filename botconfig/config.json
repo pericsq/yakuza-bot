@@ -1,11 +1,8 @@
 {
-   "token": "OTMyNDE5MDIzMTc2NjE4MDM0.Gj4iWk.9gEeEo40YHDhqhhYhvaI5YGhnYXRbNjDLq9v-A",
+   "token": "OTMyNDE5MDIzMTc2NjE4MDM0.G6sgck.j104W0Oz1QQFiQ3BMT4_1eBhvTqno0zJmUjwtA",
    "prefix": "*",
    "ownerIDS": [
-      "754977956316577802",
-      "481701586360598538",
-      "411205419068030998",
-      "957976626401005608"
+       "481701586360598538"
    ],
    "memer_api": "uPNNWWpuNo7",
    "status": {
@@ -15,27 +12,35 @@
       "text2": "working - updated coding"
    },
    "clientsettings": {
-      "nodes": [
-         {
-            "host": "lava.link",
-            "port": 80,
-            "password": "anything as a password"
-         }
-      ]
+       "nodes": [
+           {
+               "host": "185.199.95.100", 
+               "port": 10544,
+               "password": "leefernando"
+           }
+       ]
    },
    "spotify": {
-      "clientSecret": "053469ffeb3844079fab734ebf3090c2",
-      "clientID": "bf5ee2a72bae40ffadc71a47280e5ff9"
+      "clientSecret": "2d67714248b7413694040e4415dbe607",
+      "clientID": "0d9862b5f28145578b32f36782187488"
    },
    "settings": {
-      "leaveOnEmpty_Channel": {
-         "enabled": true,
-         "time_delay": 30000
-      },
-      "LeaveOnEmpty_Queue": {
-         "enabled": true,
-         "time_delay": 30000
-      },
-      "selfDeaf": true
+       "COMMENT": "10",
+       "leaveOnEmpty_Channel": {
+           "enabled": true,
+           "time_delay": 30000
+       },
+       "LeaveOnEmpty_Queue": {
+           "enabled": true,
+           "time_delay": 30000
+       },
+       "selfDeaf": true
+   },
+   "lyricssettings": {
+       "lyrics_finder": true,
+       "ksoft_api": {
+           "use_this_instead": true,
+           "api_key": "DISABLED"
+       }
    }
 }

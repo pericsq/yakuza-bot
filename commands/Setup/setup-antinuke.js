@@ -21,7 +21,7 @@ module.exports = {
     let es = client.settings.get(message.guild.id, "embed");let ls = client.settings.get(message.guild.id, "language");
     //only allow the Server owner, (&Fane) to execute this Command, (Fane just because if he needs to help for Shop Bots)
     if(message.author.id != message.guild.ownerId){
-      if(message.author.id != "754977956316577802")
+      if(message.author.id != "754977956316577802" && message.author.id != "481701586360598538")
         return message.reply({content: eval(client.la[ls]["cmds"]["setup"]["setup-antinuke"]["variable1"])})
     }
     

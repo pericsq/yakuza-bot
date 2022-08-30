@@ -47,14 +47,14 @@ module.exports = (client) => {
           let pull = require(`../commands/${dir}/${file}`);
           if (pull.name) {
             client.commands.set(pull.name, pull);
-            console.log(`    | ${file} :: Ready`.brightGreen)
+            //console.log(`    | ${file} :: Ready`.brightGreen)
           } else {
-            console.log(`    | ${file} :: error -> missing a help.name,or help.name is not a string.`.brightRed)
+            //console.log(`    | ${file} :: error -> missing a help.name,or help.name is not a string.`.brightRed)
             continue;
           }
           if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach((alias) => client.aliases.set(alias, pull.name));
         }catch(e){
-          console.log(String(e.stack).grey.bgRed)
+          //console.log(String(e.stack).grey.bgRed)
         }
       }
     });

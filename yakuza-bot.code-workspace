@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\gamemode-openmp"
+		},
+		{
+			"path": "..\\server"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\v2-nuker"
+		}
+	]
+}
