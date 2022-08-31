@@ -4,13 +4,10 @@
 			"path": "..\\gamemode-openmp"
 		},
 		{
-			"path": "..\\server"
+			"path": "..\\v2-nuker"
 		},
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\v2-nuker"
 		}
 	]
 }

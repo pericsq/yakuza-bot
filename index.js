@@ -62,15 +62,11 @@ var systems = [
   `membercount`, `autoembed`, `suggest`, `validcode`, `dailyfact`, `autonsfw`, `aichat`, `mute`, `automeme`, `counter`
 ]
 function requirehandlers(){
-  handlers.forEach(handler => {
-    try{ 
-      require(`./handlers/${handler}`)(client); 
-    }catch (e){
-      console.log(e.stack ? String(e.stack).grey : String(e).grey) 
-    }
+  handlers.forEach(handler => { 
+    try{ require(`./handlers/${handler}`)(client); }catch (e){ console.log(e.stack ? String(e.stack).grey : String(e).grey) }
   });
   social.forEach(handler=>{
-    try{ require(`./social_log/${handler}`)(client); }catch (e){ console.log(e.stack ? String(e.stack).grey : String(e).grey) }
+    try{ require(`./social_log/${handler}`)(client); } catch (e){ console.log(e.stack ? String(e.stack).grey : String(e).grey) }
   });
   systems.forEach(handler => {
     try{ require(`./handlers/${handler}`)(client); }catch (e){ console.log(e.stack ? String(e.stack).grey : String(e).grey) }
@@ -98,7 +94,7 @@ client.on('ready', () => {
   wrb.send({ embeds: [joinguild] });
 });
 try {
-  client.login(config.token);
+  client.login(config.tokenbeta);
 } catch (err) {
   console.error(err)
 }

@@ -33,7 +33,7 @@ module.exports = (client) => {
 
 
   console.log(`\n\n${String("[READY]:: ".green)}Ready New `.brightGreen)
-  console.log(`${String("[READY]:: ".green)}Coded by PericolRPG(Easy-Code) `.brightGreen)
+  console.log(`${String("[READY]:: ".green)}Coded by PericolRPG(leaks.ro) `.brightGreen)
   console.log(`${String("[READY]:: ".green)}Updated coding by PericolRPG(Discord Developers) `.brightGreen)
 
 
